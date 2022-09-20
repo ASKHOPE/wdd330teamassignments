@@ -15,26 +15,8 @@
   Make sure it is a valid number, call the summing 
   function you just wrote, and output the result to the div.
 
-
-
 3.Create an adding machine
 Add an additional input to your HTML file.
 Add a + button.
 Write a function that will take the numbers from each input,
 add them together, and output the result to a div
-
-
-  <!-- <style>
-        textarea {
-            width:800px;
-            height: 250px;
-            background-color: lightyellow;
-        }
-    </style> -->
-
-
-   ie n=5…so it would do 1+2+3+4+5 = 15) 
-
-   input = 10
-   sum = 1+2+3+4+5+6+7+8+9+10
-   result =sum added from 1 to 10
