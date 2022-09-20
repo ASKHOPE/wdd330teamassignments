@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponder: Team Activity Week 2</title>
+  <!--Denis-->
+  <script>
+        function sum_Number(){
+            var numberValue = document.getElementById("addNumber").value
+            let total = 0, count = 1;
+            while (count <= numberValue) {
+            total += count;
+            count += 1;
+            }
+            // var numberHTML = localStorage.getItem("numberValue")
+            localStorage.setItem("sumAll", sumAll)
+            document.getElementById("sumAll").innerHTML = total
+        } 
+    </script>
+  <!--Denis-->
+</head>
+<!-- BRYCE -->
+    <body>
+    <h1>Calculation</h1>
+    <!-- <input id="textinputbutton" placeholder="Input a number."></input> -->
+    <input id="addNumber" type="number" placeholder="Input a number."></input>
+    <div id="sumAll"></div>
+    <button onclick="sum_Number()">Display It</button>
+    </section>
+</body>
+<!-- BRYCE -->
+</html>
