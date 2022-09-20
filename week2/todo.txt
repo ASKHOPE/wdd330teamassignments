@@ -2,9 +2,7 @@
  Add a text input and a button. Put an empty div with an ID below those.
  Add a script tag, write a function that will read the contents of the input,
   and write them to the div.
-
-
-
+  
 2.Call the function when the button is pressed.
  Modify your HTML file:
  Write a new function that expects a number as an argument. 
