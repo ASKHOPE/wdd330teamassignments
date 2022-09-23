@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ponder: Team Activity Week 2</title>
-  <!--Denis-->
-  <script>
-        function sum_Number(){
-            var numberValue = Number(document.getElementById("addNumber").value)
-            var numberValue2 = Number(document.getElementById("addNumber2").value)
-            var combinedNumber = numberValue+numberValue2
-            // let total = 0, count = 1;
-            // while (count <= combinedNumber) {
-            // total += count;
-            // count += 1;
-            // }
-            localStorage.setItem("sumAll", sumAll)
-            // document.getElementById("sumAll").innerHTML = total
-            document.getElementById("sumAll").innerHTML = combinedNumber
-        } 
-    </script>
-  <!--Denis-->
+    <link rel="stylesheet" href="styles.css" />
 </head>
-<!-- BRYCE -->
-  <body>
-    <h1>Calculation</h1>
-    <input id="addNumber" type="number" placeholder="Input a number."></input>
-    <button>+</button>
-    <input id="addNumber2" type="number" placeholder="Input a number."></input>
-    <div id="sumAll"></div>
-    <button onclick="sum_Number()">Display It</button>
-    </section>
+
+<body>
+    <div class="container">
+        <h1>Team Activity</h1>
+        <h2>Core Requirements</h2>
+        <h3>First Function</h3>
+        <div>
+            <input id="Input1" type="text" />
+            <button id="Button1" onclick="firstFunction()">Submit</button>
+            <div id="Output1"></div>
+        </div>
+        <h3>Second Function</h3>
+        <div>
+            <input id="Input2" type="text" />
+            <button id="Button2" onclick="secondFunction()">Sum</button>
+            <div id="Output2"></div>
+        </div>
+        <h3>Third Function</h3>
+        <div>
+            <input id="Number1" placeholder="enter a number" type="number" /><input id="Number2" placeholder="enter a number" type="number" />
+            <button id="Button3" onclick="addFunction()">+</button>
+            <div id="Output3"></div>
+        </div>
+        <div class="goals">
+            <h2>Strech Goals</h2>
+            <h3>Combine Functions</h3>
+        </div>
+        <div>
+            <input id="comNumber1" placeholder="enter a number" type="number" /><input id="comNumber2" placeholder="enter a number" type="number" />
+            <button id="comAdd" onclick="arithmeticOperation(addition)">+</button>
+            <button id="comSub" onclick="arithmeticOperation(substraction)">-</button>
+            <button id="comMult" onclick="arithmeticOperation(multiplication)">*</button>
+            <div id="comOutput"></div>
+        </div>
+    </div>
+    <script src="./arithmetic.js"></script>
 </body>
-<!-- BRYCE -->
+
 </html>
