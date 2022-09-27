@@ -6,10 +6,6 @@
   </head>
   <body>
     <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-    <main>
-      <div id="show-task1"></div>
-    </main>
-
     <script>
       // Get your shorts on - this is an array workout!
       // ## Array Cardio Day 1
@@ -81,7 +77,6 @@
       const fifteen = inventors.filter(
         (inventor) => inventor.year >= 1500 && inventor.year < 1600
       );
-      //console.log(fifteen)
       console.table(fifteen);
 
       // Array.prototype.map()
@@ -89,14 +84,12 @@
       const fullname = inventors.map(
         (inventor) => `${inventor.first} ${inventor.last}`
       );
-      //console.log(fullname)
       console.table(fullname);
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
 
       const sorted = inventors.sort((a, b) => (a.year > b.year ? 1 : -1));
-      // console.log(sorted)
       console.table(sorted);
 
       // Array.prototype.reduce()
@@ -104,7 +97,6 @@
       const totalYears = inventors.reduce((total, inventor) => {
         return total + (inventor.passed - inventor.year);
       }, 0);
-      //console.log(totalYears)
       console.table(totalYears);
 
       // 5. Sort the inventors by years lived
@@ -113,8 +105,6 @@
         const nextGuy = b.passed - b.year;
         return lastGuy > nextGuy ? -1 : 1;
       });
-
-      //console.log(oldest)
       console.table(oldest);
 
       // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
