@@ -11,5 +11,3 @@ God'spower Richard Omachona
 Arnold Sujan Katru
 
 Ogunniyi Owamamwen
-
-n
