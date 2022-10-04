@@ -1,18 +1,45 @@
-const boardGame = document.querySelector(".board");
-const resetGame = document.getElementById("reset");
+let boardGame = document.querySelectorAll('.board');
+let resetButton = document.getElementById('resetButtom');
+boardGame = Array.from(boardGame);
 
-const playerOne = "X";
-const playerTwo = "O";
+let Player = "X";
 
-let player = playerOne;
+let win = [
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [0,3,6],
+    [1,4,7],
+    [2,5,8],
+    [0,4,8],
+    [2,4,6]
+]
 
-function addTac(e) {
-    e.target.innerHTML = player;
-    if (player === playerOne) {
-        player = playerTwo;
-    } else {
-        player = playerOne;
-    }
+function checkWinner(){
+    win.forEach(function(tac){
+        let checktac = tac.every(i => boardGame[i].innerText.trim() == Player)
+        if(checktac){
+            winnerColor(tac)
+        }
+    })
 }
 
-boardGame.addEventListener("click", addTac);
+function winnerColor(tac){
+    tac.forEach(function(i){
+        boardGame[i].classList.add("winner")
+    })
+}
+
+boardGame.forEach(function(board){
+    board.addEventListener('click', function(){
+        if(board.innerText.trim() != "") return
+        board.innerText = Player
+        checkWinner()
+        Player = Player == "X" ? "O" : "X"
+    })
+})
+
+resetButton.addEventListener('click', function(){
+    window.location.reload();
+
+})
