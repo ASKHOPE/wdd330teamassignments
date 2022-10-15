@@ -1,1 +1,7 @@
-import HikesController from "./HikesController.js";
+import HikesController from './hikesController.js';
+
+const myHikesController = new HikesController('hikes');
+
+window.addEventListener('load', () => {
+  myHikesController.showHikeList();
+});

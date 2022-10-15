@@ -27,15 +27,17 @@ const hikeList = [{
     },
 ];
 // Hike Model
-export default class HikeModel {
-    constructor() {
-        // We need a constructor...but in this case it isn't doing much
-    }
+class HikeModel {
     getAllHikes() {
-        // should return a list of all the hikes.
+      // should return a list of all the hikes.
+      return hikeList;
     }
-    getHikeByName(hikeName) {
-        // filter the hikes for the record identified by hikeName and return it
-        return;
+  
+    getHikeByName(name) {
+      // filter the hikes for the record identified by hikeName and return it
+      return hikeList.find(hike => hike.name === name);
     }
-}
+  }
+  
+  export default HikeModel;
+  
