@@ -37,8 +37,7 @@ class HikesView {
     const backButton = document.createElement('button');
     backButton.innerHTML = '&lt;- All Hikes';
     const item = document.createElement('li');
-    item.innerHTML = ` 
-        
+    item.innerHTML = `
             <img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}">
             <h2>${hike.name}</h2>
             <div>
