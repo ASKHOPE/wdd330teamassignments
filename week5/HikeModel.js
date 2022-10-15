@@ -1,3 +1,5 @@
+'use strict';
+
 const hikeList = [{
         name: "Bechler Falls",
         imgSrc: "falls.jpg",

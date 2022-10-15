@@ -1,7 +1,9 @@
+'use strict';
+
 import HikesController from "./hikesController.js";
 
 let myHikesController = new HikesController('hikes');
 
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   myHikesController.showHikeList();
 });

@@ -1,3 +1,5 @@
+'use strict';
+
 import HikeModel from "./hikeModel.js";
 import HikesView from "./hikesView.js";
 
