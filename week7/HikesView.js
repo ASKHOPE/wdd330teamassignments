@@ -57,11 +57,14 @@ class HikesView {
                 <h3>How to get there</h3>
                 <p>${hike.directions}</p>
             </div>
-            <div>
+              <div>
                 <h3>How to get there</h3>
-                <p>${hike.directions}</p>
+                <p>${hike.comments}</p>
             </div>
-         
+            <div>
+            <form><button>ADD COMMENT</button>
+            </form>
+            </div>
         
         `;
     parent.innerHTML = '';
