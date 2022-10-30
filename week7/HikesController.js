@@ -1,47 +1,43 @@
 'use strict';
 
-import HikeModel from "./hikeModel.js";
-import HikesView from "./hikesView.js";
+import HikeModel from './hikeModel.js';
+import HikesView from './hikesView.js';
+import Comments from './comments.js';
 
- // hike controller
 export default class HikesController {
-  // a class constructor
+   // a class constructor
   constructor(parentId) {
     this.parentElement = document.getElementById(parentId);
     this.hikeModel = new HikeModel();
     this.hikesView = new HikesView(parentId);
+    this.comments = new Comments('hikes', 'comments');
   }
   showHikeList() {
-    //  this will get called each time we need to display our full hike list. It should grab the list of hikes from the Model, and then send them to the view.
+    const hikeListElement = this.parentElement;
     const hikeList = this.hikeModel.getAllHikes();
-    this.hikesView.renderHikeList(this.parentElement, hikeList);
+    this.hikesView.renderHikeList(hikeListElement, hikeList);
     this.addHikeListener();
+    // comments
+    this.comments.showCommentList();
   }
-
-
-// add comment incomplete
-//  addComment(){
-//   const newComment = {
-//       name: hikeName,
-//       date: new Date(),
-//       content: comment
-//     };
-//  }
-  // }
-
   showOneHike(hikeName) {
-    // use this when you need to show just one hike...with full details.
+     // use this when you need to show just one hike...with full details.
     const hike = this.hikeModel.getHikeByName(hikeName);
-    this.hikesView.renderOneHikeFull(this.parentElement, hike).ontouchend =
-      () => {
-        this.showHikeList();
-      };
+    this.hikesView.renderOneHikeFull(
+      this.parentElement,
+      hike
+    ).ontouchend = () => {
+      this.showHikeList();
+    };
+    // show the comments for just this hike
+    this.comments.showCommentList(hikeName);
   }
+
   addHikeListener() {
-    // for the stretch you will need to attach a listener to each of the listed hikes to watch for a touchend.
+     // for the stretch you will need to attach a listener to each of the listed hikes to watch for a touchend.
     const childrenArray = Array.from(this.parentElement.children);
-    childrenArray.forEach((child) => {
-      child.addEventListener("touchend", (e) => {
+    childrenArray.forEach(child => {
+      child.addEventListener('touchend', e => {
         this.showOneHike(e.currentTarget.dataset.name);
       });
     });
