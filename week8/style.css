@@ -1,3 +1,9 @@
 html{
-    color:blue;
+    background-color: antiquewhite;
 }
+
+body {
+margin: auto;
+max-width: 80%;
+text-align: center;
+} 
