@@ -9,7 +9,7 @@ html{
 
 body {
     margin: auto;
-    max-width: 80%;
+    /* max-width: 80%; */
     text-align: center;
     display: grid;
     align-items: center;
@@ -17,6 +17,8 @@ body {
     grid-template-rows: auto auto;
     justify-items: center;
     background-color: #ad7d37;
+    padding-bottom: 3.5vh;
+    max-width: 40vh;
 }
 
 td,table#peoplelist{
