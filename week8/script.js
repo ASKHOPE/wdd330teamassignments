@@ -35,7 +35,7 @@ function renderPersonList(people, personListElement) {
 function renderPersonDetails(personData) {
 }
 
-function showPeople(url = "https://swapi.dev/api/people") {
+function showPeople(url = "https://swapi.dev/api/people/") {
   getProfile(url).then(function (data) {
     const results = data.results;
     const personListElement = document.getElementById("peoplelist");
