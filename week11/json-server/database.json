@@ -53,20 +53,6 @@
       "userId": "user1@email.com",
       "createdAt": 1559159640285,
       "id": 12
-    },
-    {
-      "title": "JWT authentication  test",
-      "content": "I'm testing JWT",
-      "userId": "user1@email.com",
-      "createdAt": 1669236874495,
-      "id": 13
-    },
-    {
-      "title": "Free JWT",
-      "content": "content not beauty",
-      "userId": "user1@email.com",
-      "createdAt": 1669238809764,
-      "id": 14
     }
   ]
 }
