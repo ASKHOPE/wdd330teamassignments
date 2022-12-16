@@ -4,6 +4,14 @@ body{
   flex-direction:column;  
   align-items: center;
 }
+.contentplus{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
 .errors {
     border: 1px solid darkred;
     background-color: lightcoral;
